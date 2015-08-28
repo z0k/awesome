@@ -43,7 +43,6 @@ end
 -- }}}
 
 
-
 -- Initialize widget
 memwidget = awful.widget.progressbar()
 -- Progressbar properties
@@ -102,15 +101,15 @@ end
 -- Define a tag table which hold all screen tags.
 tags = {
     settings = {
-        { names = { "main", "code", "video", "mooc", "irc", "vm", 7, 8, 9 },
-          layout = { layouts[2], layouts[2], layouts[2], 
-          layouts[2], layouts[10], layouts[2],
-          layouts[1], layouts[1], layouts[1] }
+        { names = { "main", "book", "video", "irc", "code", "mooc", "notes", 8, 9 },
+          layout = { layouts[2], layouts[10], layouts[10], 
+          layouts[10], layouts[2], layouts[2], layouts[2],
+          layouts[1], layouts[1] }
         },
-        { names = { "main", "code", "video", "mooc", "irc", "vm", 7, 8, 9 },
+        { names = { "main", "code", "video", "mooc", "irc", "vm", "notes", 8, 9 },
           layout = { layouts[2], layouts[2], layouts[2], 
-          layouts[2], layouts[2], layouts[2],
-          layouts[1], layouts[1], layouts[1] }
+          layouts[2], layouts[2], layouts[2], layouts[2],
+          layouts[1], layouts[1] }
         }
     }
 }
@@ -225,8 +224,8 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
-    right_layout:add(memwidget)
     right_layout:add(volume_widget)
+    right_layout:add(memwidget)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 
@@ -318,7 +317,7 @@ globalkeys = awful.util.table.join(
     awful.util.spawn("amixer -D pulse set Master 1+ toggle", false) end),
     
     -- Lock screen
-    awful.key({ modkey, "Control" }, "l", function()
+    awful.key({ "Alt", "Control" }, "l", function()
     awful.util.spawn("xscreensaver-command -lock") end)
 )
 
