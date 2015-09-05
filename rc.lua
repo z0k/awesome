@@ -101,7 +101,7 @@ end
 -- Define a tag table which hold all screen tags.
 tags = {
     settings = {
-        { names = { "main", "book", "video", "irc", "code", "mooc", "notes", "bt", 9 },
+        { names = { "main", "book", "video", "irc", "code", "mooc", "notes", 8, 9 },
           layout = { layouts[2], layouts[10], layouts[10], 
           layouts[10], layouts[2], layouts[2], layouts[2],
           layouts[1], layouts[1] }
@@ -421,9 +421,6 @@ awful.rules.rules = {
 -- {{{ Signals
 -- Signal function to execute when a new client appears.
 client.connect_signal("manage", function (c, startup)
-    -- Move client to screen that mouse is on.
-    awful.client.movetoscreen(c, mouse.screen)
-
     -- Enable sloppy focus
     c:connect_signal("mouse::enter", function(c)
         if awful.layout.get(c.screen) ~= awful.layout.suit.magnifier
