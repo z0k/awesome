@@ -103,11 +103,11 @@ tags = {
     settings = {
         { names = { "main", "book", "video", "irc", "code", "mooc", "notes", "bt", 9 },
           layout = { layouts[2], layouts[10], layouts[10],
-          layouts[10], layouts[2], layouts[2], layouts[2],
+          layouts[10], layouts[4], layouts[2], layouts[2],
           layouts[4], layouts[1] }
         },
         { names = { "main", "code", "video", "mooc", "music", "vm", "notes", 8, 9 },
-          layout = { layouts[2], layouts[2], layouts[2], 
+          layout = { layouts[2], layouts[4], layouts[2], 
           layouts[2], layouts[2], layouts[2], layouts[2],
           layouts[1], layouts[1] }
         }
