@@ -101,7 +101,7 @@ end
 -- Define a tag table which hold all screen tags.
 tags = {
     settings = {
-        { names = { "main", "book", "video", "irc", "code", "mooc", "notes", "bt", 9 },
+        { names = { "main", "book", "video", "irc", "code", "mooc", "notes", "bt", "todo" },
           layout = { layouts[2], layouts[10], layouts[10],
           layouts[10], layouts[4], layouts[2], layouts[2],
           layouts[4], layouts[1] }
