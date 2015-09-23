@@ -108,7 +108,7 @@ tags = {
         },
         { names = { "main", "code", "video", "mooc", "music", "vm", "notes", 8, 9 },
           layout = { layouts[2], layouts[4], layouts[2], 
-          layouts[2], layouts[2], layouts[2], layouts[2],
+          layouts[2], layouts[2], layouts[6], layouts[2],
           layouts[1], layouts[1] }
         }
     }
