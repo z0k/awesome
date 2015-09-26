@@ -328,7 +328,10 @@ globalkeys = awful.util.table.join(
     
     -- Lock screen
     awful.key({ "Alt", "Control" }, "l", function()
-    awful.util.spawn("xscreensaver-command -lock") end)
+    awful.util.spawn("xscreensaver-command -lock") end),
+
+    -- Launch Google Chrome
+    awful.key({ modkey  }, "c", function() awful.util.spawn("google-chrome") end)
 )
 
 clientkeys = awful.util.table.join(
